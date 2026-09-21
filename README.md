@@ -1,6 +1,6 @@
 # ExcerptGate
 
-Standalone GenLayer Intelligent Contract. No frontend.
+Standalone GenLayer Intelligent Contract.
 
 bind locks one URL and one excerpt. adjudicate fetches the page live.
 AFFIRMED or DENIED only if that excerpt is still on the page. Otherwise UNBOUND.
