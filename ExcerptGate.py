@@ -112,6 +112,8 @@ class ExcerptGate(gl.Contract):
     @gl.public.write
     def challenge(self, case_id: str, reason: str) -> None:
         rec = self.cases[case_id]
+        if rec.clerk != gl.message.sender_address:
+            raise Exception("only clerk can challenge")
         if rec.status not in ALLOWED:
             raise Exception("nothing to challenge")
         if not reason.strip():
